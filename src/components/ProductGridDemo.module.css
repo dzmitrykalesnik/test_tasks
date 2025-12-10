@@ -1,0 +1,340 @@
+.appContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.mainTitle {
+  font-size: 36px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #6b7280;
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.section {
+  margin-bottom: 64px;
+  padding: 24px;
+  background-color: #f9fafb;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.sectionTitle {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 8px;
+}
+
+.sectionDescription {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 24px;
+}
+
+/* Grid layout styles (Example 1) */
+.gridLayout {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* Skeleton loading styles */
+.skeletonCard {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 16px;
+  height: 200px;
+}
+
+.skeletonHeader {
+  height: 24px;
+  background-color: #e5e7eb;
+  border-radius: 4px;
+  margin-bottom: 12px;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.skeletonText {
+  height: 14px;
+  background-color: #e5e7eb;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.skeletonFooter {
+  height: 32px;
+  background-color: #e5e7eb;
+  border-radius: 4px;
+  margin-top: auto;
+}
+
+/* Error styles */
+.errorContainer {
+  text-align: center;
+  padding: 48px 24px;
+  background-color: #fef2f2;
+  border-radius: 8px;
+  border: 1px solid #fecaca;
+}
+
+.errorIcon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.errorTitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: #991b1b;
+  margin-bottom: 8px;
+}
+
+.errorMessage {
+  font-size: 14px;
+  color: #dc2626;
+  margin-bottom: 24px;
+}
+
+.retryButton {
+  padding: 10px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #dc2626;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.retryButton:hover {
+  background-color: #b91c1c;
+}
+
+.errorBanner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #991b1b;
+}
+
+.inlineError {
+  padding: 12px 16px;
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #991b1b;
+  margin-bottom: 16px;
+}
+
+/* List view styles (Example 2) */
+.loadingText {
+  text-align: center;
+  padding: 32px;
+  font-size: 16px;
+  color: #6b7280;
+}
+
+.listContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.listItem {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.listItemContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.listItemName {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.listItemPrice {
+  font-size: 18px;
+  font-weight: 700;
+  color: #059669;
+}
+
+.listItemDescription {
+  margin: 0;
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+/* Header with actions styles (Example 3) */
+.customHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 16px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.customHeaderTitle {
+  margin: 0 0 4px 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.customHeaderCount {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.primaryButton {
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #3b82f6;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.primaryButton:hover {
+  background-color: #2563eb;
+}
+
+.compactGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.compactCard {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.compactCardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.compactCardTitle {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.compactCardPrice {
+  font-size: 16px;
+  font-weight: 700;
+  color: #059669;
+}
+
+.compactCardDescription {
+  margin: 0;
+  font-size: 13px;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+/* Shared utility styles */
+.emptyState {
+  text-align: center;
+  padding: 48px 24px;
+  font-size: 16px;
+  color: #9ca3af;
+}
+
+.smallButton {
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 500;
+  background-color: #ffffff;
+  color: #374151;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.smallButton:hover {
+  background-color: #f9fafb;
+}
+
+/* Info section styles */
+.infoSection {
+  margin-top: 64px;
+  padding: 32px;
+  background-color: #eff6ff;
+  border-radius: 12px;
+  border: 1px solid #dbeafe;
+}
+
+.infoContent {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.infoBlock {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #bfdbfe;
+}
+
+.infoBlockTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1e40af;
+  margin-bottom: 8px;
+}
+
+.infoBlockText {
+  margin: 0;
+  font-size: 14px;
+  color: #1f2937;
+  line-height: 1.6;
+}
+

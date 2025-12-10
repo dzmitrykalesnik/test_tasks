@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: #ffffff;
+  color: #1f2937;
+  line-height: 1.5;
+}
+
+#root {
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  min-height: 100vh;
+  background-color: #f9fafb;
+}
+
+.tabBar {
+  display: flex;
+  gap: 8px;
+  padding: 16px 20px;
+  background-color: #ffffff;
+  border-bottom: 2px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.tab {
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  background-color: transparent;
+  color: #6b7280;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tab:hover {
+  background-color: #f3f4f6;
+}
+
+.activeTab {
+  background-color: #3b82f6;
+  color: #ffffff;
+}
+
+.activeTab:hover {
+  background-color: #2563eb;
+}
+
+.tabContent {
+  min-height: calc(100vh - 64px);
+}
+
