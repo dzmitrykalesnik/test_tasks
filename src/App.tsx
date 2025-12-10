@@ -4,7 +4,6 @@ import { PollingDemo } from './components/PollingDemo';
 import { initializeMockProductApi } from './utils/mockProductApi';
 import styles from './App.module.css';
 
-// Initialize mock API interceptor
 initializeMockProductApi();
 
 type Tab = 'task1' | 'task2';
@@ -14,7 +13,6 @@ function App() {
 
   return (
     <div className={styles.container}>
-      {/* Tab Navigation */}
       <div className={styles.tabBar}>
         <button
           className={`${styles.tab} ${activeTab === 'task1' ? styles.activeTab : ''}`}
@@ -30,7 +28,6 @@ function App() {
         </button>
       </div>
 
-      {/* Tab Content */}
       <div className={styles.tabContent}>
         {activeTab === 'task1' && <PollingDemo />}
         {activeTab === 'task2' && <ProductGridDemo />}

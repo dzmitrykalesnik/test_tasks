@@ -2,9 +2,6 @@ import { useState } from 'react';
 import { usePollingFetch } from '../hooks/usePollingFetch';
 import styles from './PollingDemo.module.css';
 
-/**
- * Mock API data types
- */
 interface Post {
   id: number;
   title: string;
@@ -19,10 +16,6 @@ interface User {
   timestamp: string;
 }
 
-/**
- * Mock API simulator that returns fake data after a delay
- * This simulates a real API endpoint without requiring an external service
- */
 const mockApiEndpoints: Record<string, () => Promise<Response>> = {
   '/api/posts': async () => {
     await new Promise((resolve) => setTimeout(resolve, 800));
@@ -59,7 +52,6 @@ const mockApiEndpoints: Record<string, () => Promise<Response>> = {
   },
 };
 
-// Intercept fetch calls for our mock endpoints
 const originalFetch = window.fetch;
 window.fetch = (input: RequestInfo | URL, init?: RequestInit): Promise<Response> => {
   const url = typeof input === 'string' ? input : input instanceof URL ? input.href : input.url;
@@ -71,15 +63,6 @@ window.fetch = (input: RequestInfo | URL, init?: RequestInit): Promise<Response>
   return originalFetch(input, init);
 };
 
-/**
- * Demo component showcasing the usePollingFetch hook
- * 
- * Demonstrates:
- * - Single fetch without polling
- * - Polling with automatic updates
- * - Race condition prevention when changing URLs
- * - Error handling
- */
 export function PollingDemo() {
   const [endpoint, setEndpoint] = useState<string>('/api/posts');
   const [pollingInterval, setPollingInterval] = useState<number | undefined>(undefined);
@@ -90,7 +73,6 @@ export function PollingDemo() {
     <div className={styles.container}>
       <h1 className={styles.title}>usePollingFetch Hook Demo</h1>
 
-      {/* Control Panel */}
       <div className={styles.controls}>
         <div className={styles.controlGroup}>
           <h3 className={styles.subtitle}>Select Endpoint:</h3>
@@ -141,7 +123,6 @@ export function PollingDemo() {
         </div>
       </div>
 
-      {/* Status Display */}
       <div className={styles.status}>
         <div className={styles.statusItem}>
           <strong>Current Endpoint:</strong> {endpoint}
@@ -164,7 +145,6 @@ export function PollingDemo() {
         </div>
       </div>
 
-      {/* Data Display */}
       <div className={styles.dataContainer}>
         <h3 className={styles.subtitle}>Response Data:</h3>
         {isLoading && !data && (

@@ -41,14 +41,12 @@
   margin-bottom: 24px;
 }
 
-/* Grid layout styles (Example 1) */
 .gridLayout {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 20px;
 }
 
-/* Skeleton loading styles */
 .skeletonCard {
   background-color: #ffffff;
   border: 1px solid #e5e7eb;
@@ -88,7 +86,6 @@
   margin-top: auto;
 }
 
-/* Error styles */
 .errorContainer {
   text-align: center;
   padding: 48px 24px;
@@ -152,7 +149,6 @@
   margin-bottom: 16px;
 }
 
-/* List view styles (Example 2) */
 .loadingText {
   text-align: center;
   padding: 32px;
@@ -199,7 +195,6 @@
   line-height: 1.5;
 }
 
-/* Header with actions styles (Example 3) */
 .customHeader {
   display: flex;
   justify-content: space-between;
@@ -278,7 +273,6 @@
   line-height: 1.5;
 }
 
-/* Shared utility styles */
 .emptyState {
   text-align: center;
   padding: 48px 24px;
@@ -301,7 +295,6 @@
   background-color: #f9fafb;
 }
 
-/* Info section styles */
 .infoSection {
   margin-top: 64px;
   padding: 32px;

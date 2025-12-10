@@ -1,10 +1,5 @@
 import type { Product } from '../types/product';
 
-/**
- * Mock product data generators
- * These functions simulate API endpoints returning product data with artificial latency
- */
-
 const widgetNames = [
   'Turbo Widget Pro',
   'Ultimate Widget X',
@@ -63,7 +58,6 @@ function generateProducts(names: string[], count: number): Product[] {
  */
 const mockApiEndpoints: Record<string, () => Promise<Response>> = {
   '/api/products/widgets': async () => {
-    // Simulate network latency
     await new Promise((resolve) => setTimeout(resolve, 800));
     
     const data: Product[] = generateProducts(widgetNames, 6);
@@ -75,7 +69,6 @@ const mockApiEndpoints: Record<string, () => Promise<Response>> = {
   },
   
   '/api/products/gadgets': async () => {
-    // Simulate network latency
     await new Promise((resolve) => setTimeout(resolve, 600));
     
     const data: Product[] = generateProducts(gadgetNames, 4);
@@ -87,7 +80,6 @@ const mockApiEndpoints: Record<string, () => Promise<Response>> = {
   },
   
   '/api/products/featured': async () => {
-    // Simulate network latency
     await new Promise((resolve) => setTimeout(resolve, 500));
     
     const data: Product[] = generateProducts(featuredNames, 3);
@@ -110,12 +102,10 @@ export function initializeMockProductApi(): void {
   window.fetch = (input: RequestInfo | URL, init?: RequestInit): Promise<Response> => {
     const url = typeof input === 'string' ? input : input instanceof URL ? input.href : input.url;
     
-    // Check if this is a mock endpoint
     if (url in mockApiEndpoints) {
       return mockApiEndpoints[url]();
     }
     
-    // Pass through to real fetch for non-mock endpoints
     return originalFetch(input, init);
   };
 }

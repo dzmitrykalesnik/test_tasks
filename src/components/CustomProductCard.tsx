@@ -1,12 +1,13 @@
 import React from 'react';
 import type { Product } from '../types/product';
-import styles from './ProductCard.module.css';
+import styles from './CustomProductCard.module.css';
+
 interface Props {
   product: Product;
   onRefetch?: () => void;
 }
 
-const ProductCard: React.FC<Props> = ({ product, onRefetch }) => {
+const CustomProductCard: React.FC<Props> = ({ product, onRefetch }) => {
   return (
     <div className={styles.card}>
       <div className={styles.cardHeader}>
@@ -28,5 +29,5 @@ const ProductCard: React.FC<Props> = ({ product, onRefetch }) => {
   );
 };
 
-export default React.memo(ProductCard);
+export default React.memo(CustomProductCard);
 
